@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 }
 html{
     font-size: 62.5%;
@@ -15,17 +16,20 @@ a{
 
 .navbar{
     width: 100%;
-    height: 5rem;  /* 10rem = 100px*/
+    height: 6rem;  /* 10rem = 100px*/
     display: grid;
     grid-template-columns: 3rem 1fr 2fr 1fr 3rem;
     background: #000;
 }
-
+.hamburger{
+    display: none;
+}
 .logo{
     /* background-color: yellowgreen; */
     grid-column: 2/3;
     display: flex;
     align-items: center;
+    height: 6rem;
 }
 
 .logo h1 {
@@ -37,41 +41,84 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
   }
+  
 .menu-link{
     grid-column: 3/4;
 }
 
-.menu-link ul{
+.menu-link ul,.mobile-menu-link ul{
     font-size: 1.7rem;
-    height: 5rem; 
+    height: 6rem; 
     display: flex;
     justify-content: center;
     align-items: center;
     /* padding-right: 15rem; */
 }
 
-.menu-link ul li{
+.menu-link ul li,.mobile-menu-link ul li{
 
     margin-left: 2rem;
     margin-right: 2rem;
 }
 
-.menu-link ul li a{
+.menu-link ul li a,.mobile-menu-link ul li a{
     font-weight:300;
     color: white;
 }
+/* .mobile-menu-link{
+    display: none;
+} */
 
+.menu-link ul li a:hover,.mobile-menu-link ul li a:hover{
+    text-decoration: underline;
+    position: relative;
+    bottom: 2px;
+    left: 2px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(206, 206, 206);
+}
+
+.sign{
+    grid-column: 4/5;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    justify-content: right;
+
+}
+
+.sign .btn{
+    padding: .3rem 1rem .3rem 1rem;
+    margin: 1rem;
+    /* border-radius: 2rem solid black; */
+    border: 2px solid white;
+  border-radius: 50px 20px;
+  background-color: black;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+  
+}
+
+.sign .btn:hover {
+    background-color: white;
+    color: black;
+}
 .Home{
     /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; */
+    height: 6rem;
     position: absolute;
         top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%)
 }
+
+
 .Home p{
     font-size: 25px;
     text-align: center;
@@ -80,15 +127,82 @@ a{
     font-size: 60px;
 }
 
-.sign{
-    display: flex;
-    /* justify-content: space-around; */
-    align-items: center;
-    justify-content: right;
+
+/* responsive code */
+
+@media (max-width: 1080px){
+    .navbar{
+        height: 5rem;  /* 10rem = 100px*/
+        grid-template-columns: 1rem 1fr 2fr 1fr 1rem;
+    }
+
+    .menu-link ul,.logo,.Home{
+        height: 5rem;
+    }
 }
 
-.sign .btn{
-    padding: .3rem 1rem .3rem 1rem;
-    margin: 1rem;
-    border-radius: 2rem solid black;
+@media (max-width: 998px){
+    .navbar{
+        grid-template-columns: 4rem 1fr 2fr 1.5rem ;
+    }
+    .hamburger{
+        font-size: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+    .menu-link{
+        display: none;
+    }
+    /* .moblie-menu-link{
+     
+        
+        grid-column: 2/4;
+        position: relative;
+    } */
+    .mobile-menu-link{
+        background-color: black;
+        /* display: flex;
+        flex-direction: column;*/
+        width: 30vh;
+        height:30vh;
+        position: absolute; 
+        top:49px;
+        left: 0px;
+        border-radius: 2px solid black;
+        
+        
+    }
+    .mobile-menu-link ul
+    {
+        width: 25vh;
+        height:30vh;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        
+    }
+    
+    
+    .mobile-menu-link ul li a{
+        font-size: 2rem;
+        font-weight:300;
+        color: white;
+    }
+    .logo{
+        grid-column: 2/3;
+        margin-left: 1rem;
+    }
+    
+
+    .sign{
+        grid-column: 3/4;
+    }
+    .sign .btn{
+        padding: .2rem .5rem .2rem .5rem;
+        margin: .5rem; 
+        }
+    
 }
