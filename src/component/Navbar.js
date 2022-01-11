@@ -1,15 +1,19 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Navbar.css'
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 const Navbar = () => {
+    const [showMenu, setShowMenu] = useState(false) ;
     return (
         <>
+            
             <nav class="navbar">
-                
+                <div className="hamburger"><a href="#"  onClick={()=> setShowMenu(!showMenu)}><GiHamburgerMenu color="white"  /></a></div>
                 <div className="logo">
-                    <h1><span>M</span>ake-<span>F</span>riends</h1>
+                    <pre><h1><span>M</span>ake-<span>F</span>riends</h1></pre>
                 </div>
-                <div className="menu-link">
+                <div className={showMenu?"mobile-menu-link":"menu-link"}>
                     <ul>
                         <li>
                             <a href="#">Home</a>
