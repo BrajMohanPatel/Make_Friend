@@ -1,10 +1,19 @@
 import React,{useState} from 'react'
 import './Navbar.css'
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from 'react-router-dom';
+import Registration from './Registration';
 
 
-const Navbar = () => {
+ 
+
+const Navbar = ({handleLoginClick}) => {
     const [showMenu, setShowMenu] = useState(false) ;
+    const [flag, setflag] = useState(false);
+    const handleClick = () => {
+        handleLoginClick();
+      };
+   
     return (
         <>
             
@@ -28,16 +37,20 @@ const Navbar = () => {
                 </div>
 
                 <div className="sign">
-                    <button className="btn">Sign In</button>
-                    <button className="btn">Sign Up</button>
+                    <button className="btn" onClick={handleClick}>Log In</button>
+                    {/* <Link to="Registration"> */}
+                    <button className="btn" onClick={()=>{setflag(true)}}>Sign Up</button>
+                    {/* </Link> */}
                 </div>
             </nav> 
             <section className='Home'>
                 <p>Welcome to</p>
                 <h1> Make-Friends</h1>
             </section>
+            <Registration trigger={flag} setTrigger={setflag}/>
         </>
     )
 }
 
-export default Navbar
+export default Navbar;
+
