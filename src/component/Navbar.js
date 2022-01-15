@@ -1,19 +1,23 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 
-const Navbar = () => {
-    const [showMenu, setShowMenu] = useState(false) ;
+
+
+
+const Navbar = ({ handleLoginClick, handleSignUPClick }) => {
+    const [showMenu, setShowMenu] = useState(false);
     return (
         <>
-            
+
             <nav class="navbar">
-                <div className="hamburger"><a href="#"  onClick={()=> setShowMenu(!showMenu)}><GiHamburgerMenu color="white"  /></a></div>
+                <div className="hamburger"><a href="#" onClick={() => setShowMenu(!showMenu)}><GiHamburgerMenu color="white" /></a></div>
                 <div className="logo">
                     <pre><h1><span>M</span>ake-<span>F</span>riends</h1></pre>
                 </div>
-                <div className={showMenu?"mobile-menu-link":"menu-link"}>
+                <div className={showMenu ? "mobile-menu-link" : "menu-link"}>
                     <ul>
                         <li>
                             <a href="#">Home</a>
@@ -28,16 +32,20 @@ const Navbar = () => {
                 </div>
 
                 <div className="sign">
-                    <button className="btn">Sign In</button>
-                    <button className="btn">Sign Up</button>
+                    <button className="btn" onClick={handleLoginClick}>Log In</button>
+                    {/* <Link to="Registration"> */}
+                    <button className="btn" onClick={handleSignUPClick} >Sign Up</button>
+                    {/* </Link> */}
                 </div>
-            </nav> 
+            </nav>
             <section className='Home'>
                 <p>Welcome to</p>
                 <h1> Make-Friends</h1>
             </section>
+
         </>
     )
 }
 
-export default Navbar
+export default Navbar;
+

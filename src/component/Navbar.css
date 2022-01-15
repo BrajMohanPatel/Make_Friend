@@ -4,6 +4,7 @@
     box-sizing: border-box;
     
 }
+
 html{
     font-size: 62.5%;
 }
@@ -15,6 +16,9 @@ a{
 }
 
 .navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 6rem;  /* 10rem = 100px*/
     display: grid;
@@ -164,8 +168,8 @@ a{
         background-color: black;
         /* display: flex;
         flex-direction: column;*/
-        width: 30vh;
-        height:30vh;
+        width: 15vh;
+        height:20vh;
         position: absolute; 
         top:49px;
         left: 0px;
@@ -175,8 +179,8 @@ a{
     }
     .mobile-menu-link ul
     {
-        width: 25vh;
-        height:30vh;
+        width: 15vh;
+        height:20vh;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -187,7 +191,7 @@ a{
     
     
     .mobile-menu-link ul li a{
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight:300;
         color: white;
     }
