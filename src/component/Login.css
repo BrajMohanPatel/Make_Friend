@@ -1,28 +1,5 @@
-/* .main-container{
+.login-form{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-inner{
-    position: relative;
-    padding: 5rem;
-    width: 100%;
-    max-width: 40px;
-    background-color: white;
-} */
-
-
-  
-  .login-form{
-    position: fixed;
-   
     width: 100%;
     display: flex;
     justify-content: center;
@@ -109,7 +86,7 @@
   .show {
     display: block;
     transition: 800ms;
-    opacity: 1;
+    opacity: 0;
   }
   
   .show.active {

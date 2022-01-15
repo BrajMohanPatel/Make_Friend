@@ -1,13 +1,14 @@
-import React from "react";
-import  "./Registration.css";
+import React from 'react';
+import './Login.css';
 
-const LoginForm = ({ isShowLogin }) => {
+const LoginForm = ({ isShowLogin },{handleSignUPClick}) => {
+
   return (
     <div className={`${isShowLogin ? "active" : ""} show`}>
       <div className="login-form">
         <div className="form-box solid">
           <form>
-            <h1 className="login-text">Sign In</h1>
+            <h1 className="login-text">Log In</h1>
             <label >Username</label>
             <br></br>
             <input type="text" name="username" className="login-box" />
@@ -18,7 +19,7 @@ const LoginForm = ({ isShowLogin }) => {
             <br></br>
             <input type="submit" value="LOGIN" className="login-btn" />
             <br></br>
-            <label className="signup-link">Don't have an account? <span className="sign-link">Sign up</span></label>
+            <label className="signup-link">Don't have an account? <button className="sign-link" onClick={handleSignUPClick}>Sign up</button></label>
           </form>
         </div>
       </div>
