@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Registration.css'
 
-const Registration = ({ isShowSignUP },{handleLoginClick}) => {
+const Registration = ({ isShowSignUP ,handleLoginClick}) => {
     
     const [values, setValues] = useState({
         name:"",
@@ -43,7 +43,7 @@ const Registration = ({ isShowSignUP },{handleLoginClick}) => {
                         <br></br>
                         <input type="submit" value="LOGIN" className="login-btn" />
                         <br></br>
-                        <label className="signup-link">Already have an account? <span className="sign-link" onClick={handleLoginClick}>Log IN</span></label>
+                        <label className="signup-link">Already have an account? <span className="sign-link" onClick={handleLoginClick}> Log in</span></label>
                     </form>
                 </div>
             </div>

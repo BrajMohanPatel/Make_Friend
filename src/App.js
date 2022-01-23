@@ -22,10 +22,12 @@ function App() {
 
 
   const handleSignUPClick = () => {
-    setIsShowSignUP((isShowSignUP) => !isShowSignUP);
+    
     if (!isShowLogin) {
       setIsShowLogin((isShowLogin) => !isShowLogin);
     }
+    setIsShowSignUP((isShowSignUP) => !isShowSignUP);
+    
 
   }
 

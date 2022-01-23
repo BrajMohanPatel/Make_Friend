@@ -1,7 +1,14 @@
 import React,{useState} from 'react';
 import './Login.css';
 
-const LoginForm = ({ isShowLogin },{handleSignUPClick}) => {
+const LoginForm = ({ isShowLogin ,handleSignUPClick}) => {
+
+  const onSignUp=(e)=>{
+    e.preventDefault();
+    
+    handleSignUPClick();
+    console.log('in login page call signup')
+  }
 
   const [values, setValues] = useState({
                                   username:"",
@@ -33,7 +40,7 @@ const LoginForm = ({ isShowLogin },{handleSignUPClick}) => {
             <br></br>
             <input type="submit" value="LOGIN" className="login-btn" />
             <br></br>
-            <label className="signup-link">Don't have an account? <button className="sign-link" onClick={handleSignUPClick}>Sign up</button></label>
+            <label className="signup-link">Don't have an account? <span className="sign-link" onClick={onSignUp}>Sign up</span></label>
           </form>
         </div>
       </div>
