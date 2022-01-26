@@ -38,10 +38,7 @@ const Navbar = ({ handleLoginClick, handleSignUPClick }) => {
                     {/* </Link> */}
                 </div>
             </nav>
-            <section className='Home'>
-                <p>Welcome to</p>
-                <h1> Make-Friends</h1>
-            </section>
+            
 
         </>
     )

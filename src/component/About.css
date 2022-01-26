@@ -1,0 +1,77 @@
+  
+  .main-container{
+    background-color: rgba(163, 110, 13)
+  }
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+
+    width: 50%;
+    
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
+    margin: 40px;
+    display: flex;
+    background-color: black;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .person-name,.email,.text{
+    font-family: 'Heebo', sans-serif;}
+  .person-name,.email{
+    color:rgb(163, 110, 13);
+    
+    
+  }
+  
+  
+  .container3{
+    padding: 16px;
+    display: block;
+    color: white;
+    width: 60%;
+  }
+  
+  .container3::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(163, 110, 13);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    
+  }
+  
+  .button:hover {
+    background-color: rgba(163, 110, 13,0.8);
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
