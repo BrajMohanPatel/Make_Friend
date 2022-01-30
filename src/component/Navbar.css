@@ -23,7 +23,7 @@ a{
     height: 6rem;  /* 10rem = 100px*/
     display: grid;
     grid-template-columns: 3rem 1fr 2fr 1fr 3rem;
-    background: #000;
+    background:rgb(163, 110, 13);
 }
 .hamburger{
     display: none;
@@ -109,27 +109,10 @@ a{
     background-color: white;
     color: black;
 }
-.Home{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-    height: 6rem;
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-}
 
 
-.Home p{
-    font-size: 25px;
-    text-align: center;
-}
-.Home h1{
-    font-size: 60px;
-}
+
+
 
 
 /* responsive code */
@@ -140,7 +123,7 @@ a{
         grid-template-columns: 1rem 1fr 2fr 1fr 1rem;
     }
 
-    .menu-link ul,.logo,.Home{
+    .menu-link ul,.logo{
         height: 5rem;
     }
 }

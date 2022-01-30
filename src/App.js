@@ -4,6 +4,9 @@ import Navbar, { vs } from './component/Navbar';
 // import Registration from './component/Registration';
 import LoginForm from './component/LoginForm';
 import Registration from './component/Registration';
+import {RemoveScrollBar} from 'react-remove-scroll-bar';
+import Home from './component/Home';
+import About from './component/About';
 
 
 
@@ -21,10 +24,12 @@ function App() {
 
 
   const handleSignUPClick = () => {
-    setIsShowSignUP((isShowSignUP) => !isShowSignUP);
+    
     if (!isShowLogin) {
       setIsShowLogin((isShowLogin) => !isShowLogin);
     }
+    setIsShowSignUP((isShowSignUP) => !isShowSignUP);
+    
 
   }
 
@@ -33,13 +38,14 @@ function App() {
 
 
     <>
-
+       {/* <RemoveScrollBar/> */}
       <Navbar handleLoginClick={handleLoginClick} handleSignUPClick={handleSignUPClick} />
       {/* <Registration trigger={vs}/> */}
       <Registration isShowSignUP={isShowSignUP} handleLoginClick={handleLoginClick} />
       <LoginForm isShowLogin={isShowLogin} handleSignUPClick={handleSignUPClick}/>
-      
-
+     
+      <Home/>
+      <About/>
 
     </>
 
